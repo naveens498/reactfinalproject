@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&family=Open+Sans&display=swap');
+
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body{
+    background-color: #56bc56;
+}
+
+:root{
+  --Inconsolata-font: 'Inconsolata', monospace;
+    --Montserrat-font: 'Montserrat', sans-serif;
+    --Poppins-font: 'Poppins', sans-serif;
+    --SpaceMono-font: 'Space Mono', monospace;
+  --ff-golos-text: 'Golos Text', sans-serif;
+  --ff-open-sans: 'Open Sans', sans-serif;
+
+  --author-color: #22201f;
+  --other-elements-color: #82c5ce;
+  --new-quote-color: #2c5363;
+}
+
+#bodyguard{
+  
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.appTitle {
+  font-family: var(--Poppins-font);
+  font-size: clamp(1rem, 7vw, 2.9rem);
+  margin-top: clamp(1.8em, 7vw, 1.4em);
+  text-align: center;
+  margin-bottom: .01%;
+  color:rgb(210, 62, 21);
+}
+
+#quote-box {
+  text-align: center;
+  margin: 0 auto;
+  width: max(400px, 70%);
+  height: min(780px, 90%);
+  padding: auto 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  background:white;
+  box-shadow:  3px 3px 10px #d0d0d0,
+              -7px -7px 12px #f0f0f078;
+  backdrop-filter: blur(16px) saturate(100%);
+  transition: all 1.5s ease-in-out;
+}
+  
+.container{
+  padding: .5em;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: .7em;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3.8em;
+  /* border: solid red 2px;*/ 
+  padding: 0 5em 0 5em;
+}
+
+#text{
+   color: var(--quote-color); 
+  padding: .5em;
+  font-family: var(--Montserrat-font);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  line-height: 1.4em;
+  text-align: center;
+  transition: all .5s ease-in-out;
+}
+
+#author {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  color: var(--author-color);
+  font-family: var(--Poppins-font);
+  padding-bottom: .8em;
+  padding-right: 1.2em;
+  text-align: right;
+  transition: all .5s ease-in-out;
+}
+
+.fa-quote-left {
+  color: var(--other-elements-color);
+  font-size: 1.5em;
+  transition: .3s;
+  text-shadow:  3px 2px 0px #d7d7d7,
+             -5px -5px 0px #ffffff00;
+}
+
+.fa-quote-left:hover {
+    transform: rotate(-30deg);
+    color: var(--new-quote-color);
+}
+
+.fa-twitter,
+.fa-instagram,
+.fa-arrow-rotate-left {
+  color: var(--other-elements-color);
+  cursor: pointer;
+  font-size: 1.3em;
+  transition: .1s;
+  position: relative;
+  border: none;
+  background: none;
+  transition: all .2s ease-in-out;
+  text-shadow:  3px 2px 0px #d7d7d7,
+             -5px -5px 0px #ffffff00;
+}
+
+.fa-twitter:hover,
+.fa-instagram:hover,
+.fa-arrow-rotate-left:hover{
+  transform: scale(1.3);
+  color: var(--new-quote-color);
+}
+
+#new-quote {
+  font-size: 1.7em;
+  color: var(--new-quote-color);
+  font-weight: 400;
+  cursor: pointer;
+  margin: 0 auto;
+  border: none;
+  background: none;
+  transition: all .3s ease-in;
+}
+#new-quote
+{
+  font-size: 25px;
+}
+.footer {
+  font-family: var(--Montserrat-font);
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--author-color);
+}
+#name{
+  text-align:center;
+  color: brown;
+  position: absolute;
+  transform: translate(550px,0px);
+}
